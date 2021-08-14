@@ -19,7 +19,8 @@ export default function App() {
   const clear = () => {
     setName([]);
   };
-
+  
+  // eslint-disable-next-line
   const shouldRandomizeName = () => {
     if (count < limit) {
       randomizeName();
