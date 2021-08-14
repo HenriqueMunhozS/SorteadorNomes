@@ -66,7 +66,7 @@ export default function App() {
   return (
     <div
       className={`text-center hero-image d-flex flex-column align-items-center justify-content-center text-white`}
-      style={{ height: "100vh", backgroundImage: `url(${logo})` }}
+      style={{ height: "100vh", backgroundImage: `url(${logo})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
     >
       <div>
         <h1 className={`display-1`}>{name}</h1>
