@@ -19,6 +19,7 @@ export default function App() {
     setName(names[index]);
   };
 
+  // eslint-disable-next-line
   const shouldRandomizeName = () => {
     if (count < limit) {
       randomizeName();
