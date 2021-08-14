@@ -11,9 +11,6 @@ export default function App() {
   const [count, setCount] = React.useState(limit);
   const [names, setNames] = React.useState([]);
   const [delay, setDelay] = React.useState(initialDelay);
-  const [showEditor, setShowEditor] = React.useState(true);
-  const [isFinal, setIsFinal] = React.useState(false);
-  const [originalNames, setOriginalNames] = React.useState("");
 
   const randomizeName = () => {
     let index = Math.floor(Math.random() * names.length);
