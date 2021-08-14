@@ -1,4 +1,5 @@
 import React from "react";
+import logo from './background.jpeg';
 
 import "./index.css";
 
@@ -18,8 +19,10 @@ export default function App() {
     let index = Math.floor(Math.random() * names.length);
     setName(names[index]);
   };
+  const clear = () => {
+    setName([]);
+  };
 
-  // eslint-disable-next-line
   const shouldRandomizeName = () => {
     if (count < limit) {
       randomizeName();
@@ -50,14 +53,16 @@ export default function App() {
   }, [count, delay, shouldRandomizeName]);
 
   const startRandomize = () => {
+    buildNewNames()
     setDelay(initialDelay);
     setShowEditor(false);
     setIsFinal(false);
     setCount(0);
   };
 
-  const buildNewNames = newNames => {
-    setOriginalNames(newNames);
+  const buildNewNames = () => {
+    var newNames = "DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,vitorof3,vitorof3,vitorof3,vitorof3,vitorof3,vitorof3,vitorof3"
+    setOriginalNames(names);
     newNames = newNames
       .replace(/(.+)\n/g, "$1,")
       .split(",")
@@ -68,39 +73,22 @@ export default function App() {
 
   return (
     <div
-      className={`text-center d-flex flex-column align-items-center justify-content-center ${isFinal && " text-white"}`}
-      style={{ height: "100vh", backgroundColor: `${isFinal ? "#0644A0" : "white"}` }}
+      className={`text-center hero-image d-flex flex-column align-items-center justify-content-center text-white`}
+      style={{ height: "100vh", backgroundImage: `url(${logo})` }}
     >
       <div>
         <h1 className={`display-1`}>{name}</h1>
       </div>
       <div className="container-fluid">
-        {showEditor && (
-          <div className="row mt-2">
-            <div className="col-6 col-lg-4 m-auto">
-              <label htmlFor="names">Nomes para sorteio</label>
-              <textarea
-                placeholder="Adicionar os nomes aqui..."
-                id="names"
-                value={originalNames}
-                style={{ minHeight: "20vh", resize: "x" }}
-                className="form-control"
-                onChange={e => buildNewNames(e.target.value)}
-              ></textarea>
-            </div>
-          </div>
-        )}
-
         <div className="text-center mt-2">
-          <button className="btn btn-secondary" onClick={startRandomize}>
+          <button  className="btn btn-secondary" onClick={startRandomize}>
             Sortear
           </button>
-
-          {!showEditor && (
-            <button className="ml-2 btn btn-outline-secondary" onClick={() => setShowEditor(true)}>
-              Editar nomes
-            </button>
-          )}
+        </div>
+        <div className="text-center mt-2">
+          <button  className="btn btn-secondary" onClick={clear}>
+            Limpar
+          </button>
         </div>
       </div>
     </div>
