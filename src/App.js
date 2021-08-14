@@ -38,9 +38,6 @@ export default function App() {
           break;
       }
     }
-    if (count === limit && name) {
-      setIsFinal(true);
-    }
   };
 
   React.useEffect(() => {
@@ -52,14 +49,11 @@ export default function App() {
   const startRandomize = () => {
     buildNewNames()
     setDelay(initialDelay);
-    setShowEditor(false);
-    setIsFinal(false);
     setCount(0);
   };
 
   const buildNewNames = () => {
     var newNames = "DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,DanielTay,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,Kyatram,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,_ricardo_mendes,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,paodealho_,vitorof3,vitorof3,vitorof3,vitorof3,vitorof3,vitorof3,vitorof3"
-    setOriginalNames(names);
     newNames = newNames
       .replace(/(.+)\n/g, "$1,")
       .split(",")
