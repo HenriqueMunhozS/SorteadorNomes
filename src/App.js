@@ -73,12 +73,12 @@ export default function App() {
       </div>
       <div className="container-fluid">
         <div className="text-center mt-2">
-          <button  className="btn btn-secondary" style={{backgroundColor: 'yellow'; color: 'black' }} onClick={startRandomize}>
+          <button  className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={startRandomize}>
             Sortear
           </button>
         </div>
         <div className="text-center mt-2">
-          <button className="btn btn-secondary" style={{backgroundColor: 'yellow'; color: 'black' }} onClick={clear}>
+          <button className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={clear}>
             Limpar
           </button>
         </div>
