@@ -80,11 +80,11 @@ export default function App() {
             Sortear
           </button>
         </div>
-        <div className="text-center mt-2">
+        {false && (<div className="text-center mt-2">
           <button className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={clear}>
             Limpar
           </button>
-        </div>
+        </div>)}
       </div>
     </div>
   );
