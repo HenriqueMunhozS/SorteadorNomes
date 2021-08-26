@@ -38,6 +38,8 @@ export default function App() {
           break;
         default:
           break;
+      } else {
+        setDisable(false);
       }
     }
   };
@@ -45,7 +47,6 @@ export default function App() {
   React.useEffect(() => {
     setTimeout(() => {
       shouldRandomizeName();
-      setDisable(true);
     }, delay);
   }, [count, delay, shouldRandomizeName]);
 
