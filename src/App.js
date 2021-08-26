@@ -77,7 +77,7 @@ export default function App() {
       </div>
       <div className="container-fluid">
         <div className="text-center mt-2">
-          <button disabled="{disabled}"  className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={startRandomize}>
+          <button disabled=`${disabled}`  className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={startRandomize}>
             Sortear
           </button>
         </div>
