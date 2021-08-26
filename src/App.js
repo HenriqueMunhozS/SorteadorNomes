@@ -11,10 +11,12 @@ export default function App() {
   const [count, setCount] = React.useState(limit);
   const [names, setNames] = React.useState([]);
   const [delay, setDelay] = React.useState(initialDelay);
+  const [disabled, setDisabled] = React.useState(false);
 
   const randomizeName = () => {
     let index = Math.floor(Math.random() * names.length);
     setName(names[index]);
+    setDisabled(false);
   };
   const clear = () => {
     setName([]);
@@ -48,6 +50,7 @@ export default function App() {
   }, [count, delay, shouldRandomizeName]);
 
   const startRandomize = () => {
+    setDisabled(true);
     buildNewNames()
     setDelay(initialDelay);
     setCount(0);
@@ -73,7 +76,7 @@ export default function App() {
       </div>
       <div className="container-fluid">
         <div className="text-center mt-2">
-          <button  className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={startRandomize}>
+          <button disabled="{disabled}"  className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={startRandomize}>
             Sortear
           </button>
         </div>
