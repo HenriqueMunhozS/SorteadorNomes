@@ -16,7 +16,6 @@ export default function App() {
   const randomizeName = () => {
     let index = Math.floor(Math.random() * names.length);
     setName(names[index]);
-    setDisable(false);
   };
   const clear = () => {
     setName([]);
@@ -46,6 +45,7 @@ export default function App() {
   React.useEffect(() => {
     setTimeout(() => {
       shouldRandomizeName();
+      setDisable(false);
     }, delay);
   }, [count, delay, shouldRandomizeName]);
 
