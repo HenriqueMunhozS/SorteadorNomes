@@ -45,6 +45,7 @@ export default function App() {
   React.useEffect(() => {
     setTimeout(() => {
       shouldRandomizeName();
+      setDisable(true);
     }, delay);
   }, [count, delay, shouldRandomizeName]);
 
