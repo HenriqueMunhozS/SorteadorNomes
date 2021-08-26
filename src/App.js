@@ -38,9 +38,9 @@ export default function App() {
           break;
         default:
           break;
-      } else {
-        setDisable(false);
       }
+    } else {
+      setDisable(false);
     }
   };
 
