@@ -4,7 +4,7 @@ import logo from './background.jpeg';
 import "./index.css";
 
 export default function App() {
-  const initialDelay = 50;
+  const initialDelay = 100;
   const limit = 60;
 
   const [name, setName] = React.useState(null);
