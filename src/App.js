@@ -23,7 +23,7 @@ export default function App() {
   
   // eslint-disable-next-line
   const shouldRandomizeName = () => {
-    setDisable(true);
+     setDisable(true);
     if (count < limit) {
       randomizeName();
       setCount(count + 1);
