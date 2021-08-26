@@ -40,7 +40,6 @@ export default function App() {
           break;
       }
     }
-    setDisable(false);
   };
 
   React.useEffect(() => {
@@ -48,6 +47,7 @@ export default function App() {
       shouldRandomizeName();
       setDisable(false);
     }, delay);
+    setDisable(false);
   }, [count, delay, shouldRandomizeName]);
 
   const startRandomize = () => {
