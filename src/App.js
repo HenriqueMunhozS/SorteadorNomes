@@ -66,17 +66,17 @@ export default function App() {
     setNames(newNames);
   };
 
-  return (
+ return (
     <div
       className={`text-center hero-image d-flex flex-column align-items-center justify-content-center text-white`}
       style={{ height: "100vh", backgroundImage: `url(${logo})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
     >
       <div>
-        <h1 className={`display-1`}>{name}</h1>
+        <h1 style={{ fontSize: '14rem' }} className={`display-1 font-text-names`}>{name}</h1>
       </div>
       <div className="container-fluid">
         <div className="text-center mt-2">
-          <button disabled={disable} className="btn btn-secondary" style={{backgroundColor: 'yellow', color: 'black' }} onClick={startRandomize}>
+          <button disabled={disable} className="btn btn-secondary botao" style={{backgroundColor: 'yellow', color: 'black' }} onClick={startRandomize}>
             Sortear
           </button>
         </div>
