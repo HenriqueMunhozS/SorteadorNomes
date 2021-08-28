@@ -5,3 +5,45 @@ body,
 #root {
   height: 100vh;
 }
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+
+.hero-image {
+  background-image: require('/images/background.jpeg'); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@font-face {
+  font-family: barlow_black;
+  src: url('./BarlowCondensed-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: barlow_regular;
+  src: url('./BarlowCondensed-Regular.ttf');
+}
+
+.font-text-names {
+  font-family: barlow_black;
+  color: #fcd41c;
+}
+
+.botao {
+  background-color: #fcd41c !important;
+  color: black;
+  width: 10%;
+  padding: 15px;
+  font-size: xx-large;
+  font-family: barlow_regular;
+}
