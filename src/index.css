@@ -42,8 +42,8 @@ body,
 .botao {
   background-color: #fcd41c !important;
   color: black;
-  width: 10%;
+  width: 20%;
   padding: 15px;
-  font-size: xx-large;
+  font-size: 6rem;
   font-family: barlow_regular;
 }
